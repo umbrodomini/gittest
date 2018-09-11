@@ -1,0 +1,12 @@
+
+{
+  "Resources": {
+    "ExampleS3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "dcastaneda-bucket",
+        "Tags": [{"Key" : "Environment", "Value" : "Dev"}]
+      }
+    }
+  }
+}
