@@ -20,8 +20,8 @@ if [ $? -eq 0 ] ; then
 echo "Upgrade Successful"
 else echo &tail logs.txt
 fi
-echo Installing transmission-daemon nmap curl ntfs-3g git awscli zip
-sudo  apt-get install transmission-daemon nmap curl ntfs-3g git awscli zip -y >> logs.txt  2>&1
+echo Installing transmission-daemon nmap curl ntfs-3g git awscli zip minidlna
+sudo  apt-get install transmission-daemon nmap curl ntfs-3g git awscli zip minidlna -y >> logs.txt  2>&1
 echo "install successfull"
 echo "fetching transmission settings"
 curl -LJO https://raw.githubusercontent.com/umbrodomini/gittest/master/settings.json >> logs.txt
