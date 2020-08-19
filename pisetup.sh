@@ -1,9 +1,8 @@
 #! /bin/bash
-echo "Installing Git if you dont have one...."
-sudo apt-get install git -y >> /dev/null
 echo "Starting Setup!"
-curl -LJO https://raw.githubusercontent.com/umbrodomini/gittest/master/settings.json
+
 echo -n "Enter IP address: "
+read ipaddress
 ipaddress=$ipaddress/24
 echo $ipaddress
 
@@ -24,6 +23,9 @@ fi
 echo Installing transmission-daemon nmap curl ntfs-3g git awscli zip
 sudo  apt-get install transmission-daemon nmap curl ntfs-3g git awscli zip -y >> logs.txt  2>&1
 echo "install successfull"
+echo "fetching transmission settings"
+curl -LJO https://raw.githubusercontent.com/umbrodomini/gittest/master/settings.json >> logs.txt
+
 echo "creating Book local directory and changing permissions"
 sudo mkdir /media/Book
 sudo chmod 0777 /media/Book
