@@ -2,7 +2,7 @@
 echo "Installing Git if you dont have one"
 sudo apt-get install git -y >> /dev/null
 echo "Starting Setup!"
-curl 
+curl -LJO https://raw.githubusercontent.com/umbrodomini/gittest/master/settings.json
 echo -n "Enter IP address: "
 read ipaddress
 ipaddress=$ipaddress/24
