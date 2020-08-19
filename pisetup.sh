@@ -55,7 +55,7 @@ echo "static IP address set to  $ipaddress"
 
 echo "SETUP COMPLETE!"
 echo some housekeeping....
-#rm -rf  pisetup* settings.json
+rm -rf settings.json
 echo "DONE!!"
 
 end_time="$(date -u +%s)"
